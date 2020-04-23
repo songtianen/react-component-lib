@@ -1,30 +1,29 @@
 {
-  "name": "react-component-lib",
-  "version": "0.1.0",
+  "name": "song-react-component-lib",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "private": true,
+  "private": false,
+  "homepage": "https://github.com/songtianen/react-component-lib.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/songtianen/react-component-lib.git"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/classnames": "^2.2.10",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.32",
-    "@types/react-dom": "^16.9.6",
-    "@types/react-transition-group": "^4.2.4",
-    "@types/storybook__addon-info": "^5.2.1",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
-    "node-sass": "^4.13.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
     "react-transition-group": "^4.3.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,7 +34,8 @@
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,6 +53,15 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.10",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-transition-group": "^4.2.4",
+    "@types/storybook__addon-info": "^5.2.1",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-info": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
@@ -60,11 +69,14 @@
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "^5.3.18",
     "@types/jest": "^25.2.1",
-    "husky": "^4.2.5",
     "react-docgen-typescript-loader": "^3.7.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.3.1",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "react-scripts": "3.4.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
