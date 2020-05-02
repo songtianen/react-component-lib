@@ -7,7 +7,7 @@ storiesOf('Welcome page', module)
       <>
         <h1>React 组件库</h1>
         <code>
-          npm install vikingship --save
+        song-react-component-lib
         </code>
       </>
     )
